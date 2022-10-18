@@ -131,7 +131,7 @@ func NaiveQueryApply(q Query, qr Results) Results {
 		}
 		// If the prefix is empty, ignore it.
 		if prefix != "/" {
-			qr = NaiveFilter(qr, FilterKeyPrefix{prefix + "/"})
+			qr = NaiveFilter(qr, FilterKeyPrefix{prefix})
 		}
 	}
 	for _, f := range q.Filters {
